@@ -20,6 +20,7 @@ function min(arr) {
 function max(arr) {
     return Math.max(...arr);
 }
+
 // ============ PART 2: STRING FUNCTIONS ============
 function capitalize(str) {
     return str.charAt(0).toUpperCase()+ str.slice(1);
@@ -30,8 +31,6 @@ function reverse(str) {
 }
 
 function countVowels(str) {
-  // TODO: Return count of vowels (a, e, i, o, u)
-  // "hello" -> 2
   const vowels = "aeiouAEIOU";
   let count = 0;
   for (let char of str){
@@ -41,3 +40,23 @@ function countVowels(str) {
   }
   return count;
 }
+
+// ============ PART 3: OBJECT ============
+const student = {
+  name: "Your Name",
+  age: 20,
+  grades: [85, 92, 78, 90, 88],
+  
+  getAverage: function() {
+    let sum = 0;
+    for(let grade of this.grades) {
+        sum += grade;
+    }
+    return sum / this.grades.length;
+  },
+  
+  isHonorRoll: function() {
+    // TODO: Return true if average > 85
+    return this.getAverage() > 85;
+  }
+};
