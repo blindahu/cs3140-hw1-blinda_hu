@@ -1,4 +1,4 @@
-**Name:**Blinda Hu
+**Name:** Blinda Hu
 
 **How to run:** index.js
 
